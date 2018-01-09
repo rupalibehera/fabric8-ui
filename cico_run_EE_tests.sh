@@ -34,6 +34,12 @@ mkdir -p dist && docker run --detach=true --name=fabric8-ui-builder --user=root 
 # Build
 docker exec fabric8-ui-builder npm install
 
+# Check which branch
+git status
+git branch
+git log
+git show
+
 ## Clean up OpenShift builds, pipelines, etc. from prior jobs - commented out for now - until test can run more reliably
 ##
 ##docker exec fabric8-ui-builder wget https://github.com/openshift/origin/releases/download/v1.5.0/openshift-origin-client-tools-v1.5.0-031cbe4-linux-64bit.tar.gz
